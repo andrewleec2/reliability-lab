@@ -9,6 +9,7 @@ I'm an SRE with 14+ years in enterprise reliability. This repo is where I practi
 | File | Purpose |
 | --- | --- |
 | `Dockerfile` | A minimal Ubuntu image with `curl` installed, used as a clean, disposable shell for testing and troubleshooting. |
+| `health-app/` | A tiny Python (Flask) web app with a `/health` endpoint, runnable with a venv or Docker. See [health-app/README.md](health-app/README.md). |
 | `README.md` | This file. |
 
 The current image:
@@ -66,6 +67,7 @@ docker system prune           # clean up stopped containers and unused data
 Planned labs, roughly in order. Each one will live in its own folder with its own README.
 
 - [x] **Docker basics:** a minimal Ubuntu troubleshooting container
+- [x] **Health check app:** a Python web app with a JSON `/health` endpoint, packaged with Docker
 - [ ] **Log parser:** a Python CLI that loads application logs into SQLite and reports the top errors by service
 - [ ] **Alert triage bot:** an LLM-powered assistant that reads an alert and returns severity, likely component, and three first checks, measured with a scored evaluation set
 - [ ] **Runbook search:** retrieval over a small set of runbooks so answers come with citations
